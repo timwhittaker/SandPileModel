@@ -24,17 +24,17 @@ with open('data.csv','r') as csvfile:
 
 
 imported_data = np.array(imported_data)
-field = np.reshape(imported_data,(500,500))
+field = np.reshape(imported_data,(1000,1000))
 
 
 # In[13]:
 
 
-fig = plt.figure(figsize=(10.0,10.0), dpi=100.0, frameon=False)
+fig = plt.figure(figsize=(15.0,15.0), dpi=200.0, frameon=False)
 ax = plt.Axes(fig, [0,0,1,1])
 ax.set_axis_off()
 fig.add_axes(ax)
-ax.imshow(field / np.max(field), cmap='plasma', vmin=0, vmax=1)
+ax.imshow(field / np.max(field), cmap='jet', vmin=0, vmax=1)
 plt.savefig("test.eps")
 plt.show()
 

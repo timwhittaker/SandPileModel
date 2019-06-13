@@ -48,11 +48,11 @@ use time_keeper
 
         ! Initialize var
         MAXH = 4
-        FPH  = 10000
+        FPH  = 500000
         i    = 0
         MPC(1) = 100
         MPC(2) = 200
-        dimen = 500
+        dimen = 1000
 
         allocate(maxlocation(FPH/MAXH,2))
         allocate(field(dimen,dimen))
@@ -65,9 +65,9 @@ use time_keeper
                 end do
         end do
         
-        field(249,225) = FPH
-        field(249,275) = FPH
-        field(249,249) = FPH/2
+        field(549,525) = FPH
+        field(549,575) = FPH
+        field(549,549) = FPH/2
         
         call startclock()
 
